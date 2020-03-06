@@ -39,10 +39,14 @@ app.get("/home", function(req, res){
 	
 });
 
-var myPort = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log('listening on ${PORT}'));
+
+/*var myPort = process.env.PORT || 5000;
 
 app.listen(myPort, function(){
 
 console.log("the server is running and listening on port 5000");
 	
-});
+});*/
