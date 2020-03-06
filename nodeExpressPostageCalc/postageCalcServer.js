@@ -39,7 +39,7 @@ app.get("/home", function(req, res){
 	
 });
 
-var myPort = process.env.PORT || 80;
+var myPort = process.env.PORT || 5000;
 
 app.listen(myPort, function(){
 
