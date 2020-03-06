@@ -39,7 +39,9 @@ app.get("/home", function(req, res){
 	
 });
 
-app.listen(80, function(){
+var myPort = process.env.PORT || 80;
+
+app.listen(myPort, function(){
 
 console.log("the server is running and listening on port 5000");
 	
