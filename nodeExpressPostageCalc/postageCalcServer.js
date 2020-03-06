@@ -39,7 +39,7 @@ app.get("/home", function(req, res){
 	
 });
 
-app.listen(5000, function(){
+app.listen(80, function(){
 
 console.log("the server is running and listening on port 5000");
 	
