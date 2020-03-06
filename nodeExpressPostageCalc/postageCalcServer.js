@@ -35,7 +35,7 @@ app.get("/home", function(req, res){
 	
 	console.log("received a request for /home");
 	
-	res.render("!!!!!!!!!!!!put a page here!!!!!!!!!!!!!!!!", params);
+	res.render("responseDisplay", params);
 	
 });
 
