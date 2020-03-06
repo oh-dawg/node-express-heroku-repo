@@ -1,0 +1,15 @@
+{
+  "name": "nodeexpresspostagecalc",
+  "version": "1.0.0",
+  "description": "calculator for postage",
+  "main": "postageCalcServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orion Christensen",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
