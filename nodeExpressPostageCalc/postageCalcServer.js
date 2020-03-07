@@ -17,7 +17,7 @@ app.get("/", function() {
 	
 });
 
-app.get("/postage", handleRootRequest);
+app.get("/postage", handlePostageRequest);
 /*app.get("/", function(req, res){
 	
 	console.log("received a request for /");
