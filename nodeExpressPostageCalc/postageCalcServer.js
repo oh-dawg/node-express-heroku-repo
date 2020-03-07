@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.get("/", function() { 
 
 	console.log("started the landing page");
+	res.render("postageForm");
 	
 });
 
