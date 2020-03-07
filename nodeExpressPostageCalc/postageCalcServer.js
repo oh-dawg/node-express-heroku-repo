@@ -20,8 +20,18 @@ app.get("/", handleRootRequest);
 function handleRootRequest(req, res){
 	console.log("received a request for /");
 	
-	res.write("This is the root");
-	res.end();
+	/*res.write("This is the root");
+	res.end();*/
+	
+	var name = "john";
+	
+	var emailAddress = "john@email.com";
+	
+	var params = {username: name, email: emailAddress};
+	
+	console.log("received a request for /home");
+	
+	res.render("responseDisplay", params);
 	
 }
 
