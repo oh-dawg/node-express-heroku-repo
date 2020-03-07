@@ -20,6 +20,8 @@
 			<input type="text name="largeEnvelopes">
 			<label for="largeEnvelopes">Large Envelopes</label>
 			
+			<button id="submitRecord" name="validate" type="submit">submit</button>
+			
 		</form>
 	  
 	</div>
