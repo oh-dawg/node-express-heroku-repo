@@ -36,33 +36,38 @@ function handlePostageRequest(req, res){
 	
 	//console.log(stampedLetterVar);
 	
-	var postageVar = 0.00;
+	//var postageVar = 0.00;
+	var postageVar = parseFloat("0.00");
 	
 	// stamped letters
 	if(stampedLetterVar <= 1)
 	{
 		
 		
-		postageVar = 0.55;
+		//postageVar = 0.55;
+		postageVar = parseFloat("0.55");
 		console.log(postageVar);
 		
 	}
 	if(stampedLetterVar <= 2)
 	{
 		
-		 postageVar = 0.70;
+		 //postageVar = 0.70;
+		 postageVar = parseFloat("0.70");
 		
 	}
 	if(stampedLetterVar <= 3)
 	{
 		
-		postageVar = 0.85;
+		//postageVar = 0.85;
+		postageVar = parseFloat("0.85");
 		
 	}
 	if(stampedLetterVar <= 3.5)
 	{
 		
-		postageVar = 1.00;
+		//postageVar = 1.00;
+		postageVar = parseFloat("1.00");
 		
 	}
 	
@@ -70,25 +75,29 @@ function handlePostageRequest(req, res){
 	if(meteredLetterVar <= 1)
 	{
 		
-		postageVar = 0.50;
+		//postageVar = 0.50;
+		postageVar = parseFloat("0.50");
 		
 	}
 	if(meteredLetterVar <= 2)
 	{
 		
-		postageVar = 0.65;
+		//postageVar = 0.65;
+		postageVar = parseFloat("0.65");
 		
 	}
 	if(meteredLetterVar <= 3)
 	{
 		
-		postageVar = 0.80;
+		//postageVar = 0.80;
+		postageVar = parseFloat("0.80");
 		
 	}
 	if(meteredLetterVar <= 3.5)
 	{
 		
-		postageVar = 0.95;
+		//postageVar = 0.95;
+		postageVar = parseFloat("0.95");
 		
 	}
 	
@@ -96,84 +105,91 @@ function handlePostageRequest(req, res){
 	if(largeEnvelopesVar <= 1)
 	{
 		
-		postageVar = 1.00;
+		//postageVar = 1.00;
+		postageVar = parseFloat("1.00");
 		
 	}
 	if(largeEnvelopesVar <= 2)
 	{
 		
-		postageVar = 1.20;
+		//postageVar = 1.20;
+		postageVar = parseFloat("1.20");
 		
 	}
 	if(largeEnvelopesVar <= 3)
 	{
 		
-		postageVar = 1.40;
+		//postageVar = 1.40;
+		postageVar = parseFloat("1.40");
 		
 	}
 	if(largeEnvelopesVar <= 4)
 	{
 		
-		postageVar = 1.60;
+		//postageVar = 1.60;
+		postageVar = parseFloat("1.60");
 		
 	}
 	if(largeEnvelopesVar <= 5)
 	{
 		
-		postageVar = 1.80;
+		//postageVar = 1.80;
+		postageVar = parseFloat("1.80");
 		
 	}
 	if(largeEnvelopesVar <= 6)
 	{
 		
-		postageVar = 2.00;
+		//postageVar = 2.00;
+		postageVar = parseFloat("2.00");
 		
 	}
 	if(largeEnvelopesVar <= 7)
 	{
 		
-		postageVar = 2.20;
+		//postageVar = 2.20;
+		postageVar = parseFloat("2.20");
 		
 	}
 	if(largeEnvelopesVar <= 8)
 	{
 		
-		postageVar = 2.40;
+		postageVar = parseFloat("2.40");
 		
 	}
 	if(largeEnvelopesVar <= 9)
 	{
 		
-		postageVar = 2.60;
+		postageVar = parseFloat("2.60");
 		
 	}
 	if(largeEnvelopesVar <= 10)
 	{
 		
-		postageVar = 2.80;
+		postageVar = parseFloat("2.80");
 		
 	}
 	if(largeEnvelopesVar <= 11)
 	{
 		
-		postageVar = 3.00;
+		postageVar = parseFloat("3.00");
 		
 	}
 	if(largeEnvelopesVar <= 12)
 	{
 		
-		postageVar = 3.20;
+		postageVar = parseFloat("3.20");
 		
 	}
 	if(largeEnvelopesVar <= 13)
 	{
 		
-		postageVar = 3.40;
+		postageVar = parseFloat("3.40");
 		
 	}
 	
 	
-	param = {postage: postageVar.toFixed(2)};
+	param = {postage: parseFloat(postageVar).toFixed(2)};
 	res.render("responseDisplay", param);
 	
 	
