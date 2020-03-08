@@ -30,14 +30,16 @@ function handlePostageRequest(req, res){
 	/*res.write("This is the root");
 	res.end();*/
 	
-	var  stampedLetterVar = Number(req.query.stampedLetters);
-	var  meteredLetterVar = Number(req.query.meteredLetters);
-	var  largeEnvelopesVar = Number(req.query.largeEnvelopes);
+	const  stampedLetterVar = parseInt(req.query.stampedLetters);
+	const  meteredLetterVar = parseInt(req.query.meteredLetters);
+	const  largeEnvelopesVar = parseInt(req.query.largeEnvelopes);
+	
+	console.log(stampedLetterVar);
 	
 	var postageVar = 0;
 	
 	// stamped letters
-	if(stampedLetterVar == 1)
+	if(stampedLetterVar <= 1)
 	{
 		
 		console.log(" got into the 1");
