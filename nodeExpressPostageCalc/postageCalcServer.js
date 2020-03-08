@@ -30,9 +30,9 @@ function handlePostageRequest(req, res){
 	/*res.write("This is the root");
 	res.end();*/
 	
-	const  stampedLetterVar = parseInt(req.query.stampedLetters);
-	const  meteredLetterVar = parseInt(req.query.meteredLetters);
-	const  largeEnvelopesVar = parseInt(req.query.largeEnvelopes);
+	var  stampedLetterVar = parseInt(req.query.stampedLetters);
+	var  meteredLetterVar = parseInt(req.query.meteredLetters);
+	var  largeEnvelopesVar = parseInt(req.query.largeEnvelopes);
 	
 	console.log(stampedLetterVar);
 	
