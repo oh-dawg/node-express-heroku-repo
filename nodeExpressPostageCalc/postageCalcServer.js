@@ -36,7 +36,7 @@ function handlePostageRequest(req, res){
 	
 	console.log(stampedLetterVar);
 	
-	var postageVar = 0;
+	var postageVar = 0.00;
 	
 	// stamped letters
 	if(stampedLetterVar <= 1)
