@@ -37,9 +37,10 @@ function handlePostageRequest(req, res){
 	var postageVar = 0;
 	
 	// stamped letters
-	if(stampedLetterVar <= 1)
+	if(stampedLetterVar == 1)
 	{
 		
+		console.log(" got into the 1");
 		postageVar = 0.55;
 		
 	}
