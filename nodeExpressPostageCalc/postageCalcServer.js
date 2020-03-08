@@ -30,11 +30,11 @@ function handlePostageRequest(req, res){
 	/*res.write("This is the root");
 	res.end();*/
 	
-	var  stampedLetterVar = float(req.query.stampedLetters);
-	var  meteredLetterVar = float(req.query.meteredLetters);
-	var  largeEnvelopesVar = float(req.query.largeEnvelopes);
+	var  stampedLetterVar = Number(req.query.stampedLetters);
+	var  meteredLetterVar = Number(req.query.meteredLetters);
+	var  largeEnvelopesVar = Number(req.query.largeEnvelopes);
 	
-	var postageVar = 0;
+	var postageVar;
 	
 	// stamped letters
 	if(stampedLetterVar <= 1)
@@ -46,7 +46,7 @@ function handlePostageRequest(req, res){
 	if(stampedLetterVar <= 2)
 	{
 		
-		postageVar = 0.70;
+		 postageVar = 0.70;
 		
 	}
 	if(stampedLetterVar <= 3)
