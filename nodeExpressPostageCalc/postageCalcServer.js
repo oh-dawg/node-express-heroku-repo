@@ -34,7 +34,7 @@ function handlePostageRequest(req, res){
 	var  meteredLetterVar = parseInt(req.query.meteredLetters);
 	var  largeEnvelopesVar = parseInt(req.query.largeEnvelopes);
 	
-	console.log(stampedLetterVar);
+	//console.log(stampedLetterVar);
 	
 	var postageVar = 0.00;
 	
@@ -42,8 +42,9 @@ function handlePostageRequest(req, res){
 	if(stampedLetterVar <= 1)
 	{
 		
-		console.log(" got into the 1");
+		
 		postageVar = 0.55;
+		console.log(postageVar);
 		
 	}
 	if(stampedLetterVar <= 2)
@@ -172,7 +173,7 @@ function handlePostageRequest(req, res){
 	}
 	
 	
-	var param = {postage: postageVar};
+	param = {postage: postageVar.toFixed(2)};
 	res.render("responseDisplay", param);
 	
 	
