@@ -34,7 +34,7 @@ function handlePostageRequest(req, res){
 	var  meteredLetterVar = Number(req.query.meteredLetters);
 	var  largeEnvelopesVar = Number(req.query.largeEnvelopes);
 	
-	var postageVar;
+	var postageVar = 0;
 	
 	// stamped letters
 	if(stampedLetterVar <= 1)
