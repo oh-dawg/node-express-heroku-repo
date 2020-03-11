@@ -49,21 +49,21 @@ function handlePostageRequest(req, res){
 		console.log(postageVar);
 		
 	}
-	if(stampedLetterVar <= 2)
+	else if(stampedLetterVar <= 2)
 	{
 		
 		 //postageVar = 0.70;
 		 postageVar = parseFloat("0.70");
 		
 	}
-	if(stampedLetterVar <= 3)
+	else if(stampedLetterVar <= 3)
 	{
 		
 		//postageVar = 0.85;
 		postageVar = parseFloat("0.85");
 		
 	}
-	if(stampedLetterVar <= 3.5)
+	else if(stampedLetterVar <= 3.5)
 	{
 		
 		//postageVar = 1.00;
@@ -79,21 +79,21 @@ function handlePostageRequest(req, res){
 		postageVar = parseFloat("0.50");
 		
 	}
-	if(meteredLetterVar <= 2)
+	else if(meteredLetterVar <= 2)
 	{
 		
 		//postageVar = 0.65;
 		postageVar = parseFloat("0.65");
 		
 	}
-	if(meteredLetterVar <= 3)
+	else if(meteredLetterVar <= 3)
 	{
 		
 		//postageVar = 0.80;
 		postageVar = parseFloat("0.80");
 		
 	}
-	if(meteredLetterVar <= 3.5)
+	else if(meteredLetterVar <= 3.5)
 	{
 		
 		//postageVar = 0.95;
@@ -109,79 +109,79 @@ function handlePostageRequest(req, res){
 		postageVar = parseFloat("1.00");
 		
 	}
-	if(largeEnvelopesVar <= 2)
+	else if(largeEnvelopesVar <= 2)
 	{
 		
 		//postageVar = 1.20;
 		postageVar = parseFloat("1.20");
 		
 	}
-	if(largeEnvelopesVar <= 3)
+	else if(largeEnvelopesVar <= 3)
 	{
 		
 		//postageVar = 1.40;
 		postageVar = parseFloat("1.40");
 		
 	}
-	if(largeEnvelopesVar <= 4)
+	else if(largeEnvelopesVar <= 4)
 	{
 		
 		//postageVar = 1.60;
 		postageVar = parseFloat("1.60");
 		
 	}
-	if(largeEnvelopesVar <= 5)
+	else if(largeEnvelopesVar <= 5)
 	{
 		
 		//postageVar = 1.80;
 		postageVar = parseFloat("1.80");
 		
 	}
-	if(largeEnvelopesVar <= 6)
+	else if(largeEnvelopesVar <= 6)
 	{
 		
 		//postageVar = 2.00;
 		postageVar = parseFloat("2.00");
 		
 	}
-	if(largeEnvelopesVar <= 7)
+	else if(largeEnvelopesVar <= 7)
 	{
 		
 		//postageVar = 2.20;
 		postageVar = parseFloat("2.20");
 		
 	}
-	if(largeEnvelopesVar <= 8)
+	else if(largeEnvelopesVar <= 8)
 	{
 		
 		postageVar = parseFloat("2.40");
 		
 	}
-	if(largeEnvelopesVar <= 9)
+	else if(largeEnvelopesVar <= 9)
 	{
 		
 		postageVar = parseFloat("2.60");
 		
 	}
-	if(largeEnvelopesVar <= 10)
+	else if(largeEnvelopesVar <= 10)
 	{
 		
 		postageVar = parseFloat("2.80");
 		
 	}
-	if(largeEnvelopesVar <= 11)
+	else if(largeEnvelopesVar <= 11)
 	{
 		
 		postageVar = parseFloat("3.00");
 		
 	}
-	if(largeEnvelopesVar <= 12)
+	else if(largeEnvelopesVar <= 12)
 	{
 		
 		postageVar = parseFloat("3.20");
 		
 	}
-	if(largeEnvelopesVar <= 13)
+	else if(largeEnvelopesVar <= 13)
 	{
 		
 		postageVar = parseFloat("3.40");
