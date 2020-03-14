@@ -41,8 +41,6 @@ app.get("/collageproject", function(req, res) {
 	
 });
 
-
-
 function getCollageFromDb(id, callback){
 	console.log("getPersonFromDB");
 	
