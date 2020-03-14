@@ -9,7 +9,7 @@ var app = express();
 const {Pool} = require("pg");
 
 //connection string to connect to a database
-const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo"
+const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo";
 const pool = new Pool ({connectionString: myConnectionString});
 
 app.use(express.static("public"));
@@ -26,26 +26,38 @@ app.get("/", function(req, res) {
 
 app.get("/collageproject", function(req, res) { 
 
-	console.log("started the landing page");
+	console.log("started the collage page");
 	res.render("collageForm");
 	
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
-	getCollageFromDb(picturedetail, function(error, result)) {
+		getCollageFromDb(picturedetail, function(error, result)) {
 	
-	console.log("retrieving item from the DB");
+		console.log("retrieving item from the DB");
 	
-	// SELECT * from collagetable;
+		// SELECT * from collagetable;
 	
-});
-	
-	
+		});
 	
 });
 
 
 
 function getCollageFromDb(id, callback){
+	console.log("getPersonFromDB");
+	
+	var sql = "SELECT id, picturedetail1, picturedetail2, picturedetail3, ppicturefilename FROM collagetable WHERE id = $1::int";
+	var params = [id];
+	pool.query(sql, params, function(err, result){
+		if(err){
+			console.log("an error with the db occured");
+			
+		}
+		
+		console.log("found db result" + JSON.strinify(result.rows));
+		callback(null, result.rows);
+		
+	});
 	
 }
 
