@@ -29,6 +29,7 @@ app.get("/collageproject", function(req, res) {
 	console.log("started the collage page");
 	res.render("collageForm");
 	
+	/*
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
 		getCollageFromDb(picturedetail, function(error, result)) {
@@ -38,6 +39,8 @@ app.get("/collageproject", function(req, res) {
 		// SELECT * from collagetable;
 	
 		});
+		
+		*/
 	
 });
 
