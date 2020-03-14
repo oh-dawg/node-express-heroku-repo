@@ -6,11 +6,11 @@ var express = require("express");
 var app = express();
 
 // pool
-const {Pool} = require("pg");
+//const {Pool} = require("pg");
 
 //connection string to connect to a database
-const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo";
-const pool = new Pool ({connectionString: myConnectionString});
+//const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo";
+//const pool = new Pool ({connectionString: myConnectionString});
 
 app.use(express.static("public"));
 
