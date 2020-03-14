@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   
+   </head>
+    <body>
+   
+   
+	
+	
+	<button id="submitRecord" name="request collage table" type="submit" onclick="getcollagedata()">request collage table</button>
+   	
+	<script>
+	//json.parse(responsetext) got to url to put your data. 
+	
+	function getcollagedata(url, cFunction){
+
+	var filePathName = 'collageForm.ejs';
+	var contentRequest = new XMLHttpRequest();
+  
+	//console.log("i got the request");
+  
+	contentRequest.onreadystatechange = function(){
+  
+	//console.log("i got in the readyStateChange");
+	if(this.readyState == 4 && this.status == 200)
+       {
+       
+       var fileData = contentRequest.responseText;
+       //var fileParsedData = JSON.parse(fileData);
+       parseFileData(fileData);
+       
+       }
+       
+       
+	///home/chr16039/public_html/json.txt
+  
+	};
+  
+	contentRequest.open("GET", filePathName , true);
+	contentRequest.send();
+  
+	//parseFileData(fileData);
+
+	}
+
+	function synthesizeWebPage(contentRequest){
+ 
+	.innerHTML = contentRequest.responseText;
+
+	}
+	</script>
+	
+	</body>
+</html>

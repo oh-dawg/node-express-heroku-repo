@@ -5,6 +5,13 @@ var express = require("express");
 // install ejs, video 4 6:23
 var app = express();
 
+// pool
+const {Pool} = require("pg");
+
+//connection string to connect to a database
+const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo"
+const pool = new Pool ({connectionString: myConnectionString});
+
 app.use(express.static("public"));
 
 app.set("views","viewsTemplate");
@@ -16,6 +23,21 @@ app.get("/", function(req, res) {
 	res.render("postageForm");
 	
 });
+
+app.get("/collageproject", function(req, res) { 
+
+	console.log("started the landing page");
+	res.render("collageForm");
+	
+	//req.query.id;
+	
+});
+
+app.get() {
+	
+	SELECT * from collagetable;
+	
+}
 
 app.get("/postage", handlePostageRequest);
 /*app.get("/", function(req, res){
