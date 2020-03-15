@@ -4,17 +4,14 @@
   "description": "calculator for postage",
   "main": "postageCalcServer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error:no test specified\" && exit 1"
   },
   "author": "Orion Christensen",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1"
-  },
-  "scripts": {
-	"start": "node server.js", 
-	"test": "echo \'Error:no test specified\' && exit 1"
+    "express": "^4.17.1",
+    "pg": "^7.18.2"
   }
-  
 }
