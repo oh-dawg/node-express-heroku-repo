@@ -29,7 +29,7 @@ app.get("/collageproject", function(req, res) {
 	console.log("started the collage page");
 	res.render("collageForm");
 	
-	/*
+	
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
 		getCollageFromDb(picturedetail, function(error, result)) {
@@ -40,14 +40,14 @@ app.get("/collageproject", function(req, res) {
 	
 		});
 		
-		*/
+		
 	
 });
 
 function getCollageFromDb(id, callback){
 	console.log("getPersonFromDB");
 	
-	/*
+	
 	var sql = "SELECT id, picturedetail1, picturedetail2, picturedetail3, ppicturefilename FROM collagetable WHERE id = $1::int";
 	var params = [id];
 	pool.query(sql, params, function(err, result){
@@ -60,7 +60,7 @@ function getCollageFromDb(id, callback){
 		callback(null, result.rows);
 		
 	});
-	*/
+	
 	
 }
 
