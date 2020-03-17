@@ -32,13 +32,13 @@ app.get("/collageproject", function(req, res) {
 	
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
-		getCollageFromDb(picturedetail, function(error, result)) {
+		/*getCollageFromDb(picturedetail, function(error, result)) {
 	
 		console.log("retrieving item from the DB");
 	
 		// SELECT * from collagetable;
 	
-		};
+		});*/
 		
 		
 	
