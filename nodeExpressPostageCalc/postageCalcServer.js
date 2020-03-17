@@ -60,8 +60,7 @@ function getCollageFromDb(id, callback){
 		callback(null, result.rows);
 		
 	});
-	
-	
+		
 }
 
 app.get("/postage", handlePostageRequest);
