@@ -9,7 +9,7 @@ var app = express();
 const {Pool} = require("pg");
 
 //connection string to connect to a database
-const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:5432/node-express-heroku-repo";
+const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:f04afeed7007ac3f3c39f7dd165c2ca20ec541b7942b032d92b7c2bd96eb1bc6@ec2-52-45-14-227.compute-1.amazonaws.com:5432/dfjeaerva4s9th?ssl=true";
 const pool = new Pool ({connectionString: myConnectionString});
 
 app.use(express.static("public"));
