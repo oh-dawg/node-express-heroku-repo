@@ -28,7 +28,7 @@ app.get("/collageproject", function(req, res) {
 
 	console.log("started the collage page");
 	res.render("collageForm");
-	
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! i need to call getCollage
 });
 
 function getCollage(req, res){
