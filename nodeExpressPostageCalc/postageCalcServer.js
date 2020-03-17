@@ -38,7 +38,7 @@ app.get("/collageproject", function(req, res) {
 	
 		// SELECT * from collagetable;
 	
-		});
+		};
 		
 		
 	
