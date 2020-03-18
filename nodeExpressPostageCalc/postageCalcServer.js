@@ -17,6 +17,8 @@ app.use(express.static("public"));
 app.set("views","viewsTemplate");
 app.set("view engine", "ejs");
 
+document.write("Hello World!");
+
 app.get("/", function(req, res) { 
 
 	console.log("started the landing page");
