@@ -35,6 +35,8 @@ app.get("/collageproject", function(req, res) {
 
 function getCollage(req, res){
 	
+	console.log("i got into the collage project function");
+	
 	var result = {id: 123, picturedetail: "vacation", picturedetail2: "pet", picturedetail3: "nature"};
 	
 	res.json(result);
@@ -264,7 +266,7 @@ app.get("/home", function(req, res){
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log('listening on ${PORT}'));
+app.listen(PORT, () => console.log('listening on my server'));
 
 /*var myPort = process.env.PORT || 5000;
 
