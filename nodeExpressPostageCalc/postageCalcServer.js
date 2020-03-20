@@ -35,6 +35,10 @@ app.get("/collageproject", function(req, res) {
 
 function getCollage(req, res){
 	
+	var result = {id: 123, picturedetail: "vacation", picturedetail2: "pet", picturedetail3: "nature"};
+	
+	res.json(result);
+	
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
 		getCollageFromDb(picturedetail, function(error, result) {
