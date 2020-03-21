@@ -34,7 +34,7 @@ app.get("/collageproject", function(req, res) {
 	
 });
 // comment this out till you can figure out why it wont work when you hit the button on collageForm
-function getCollage(req, res){
+/*function getCollage(req, res){
 	
 	console.log("i got into the collage project function");
 	
@@ -52,9 +52,9 @@ function getCollage(req, res){
 	
 		});
 	
-}
+}*/
 // comment this out till getCollage() is working.
-function getCollageFromDb(picturedetail, callback){
+/*function getCollageFromDb(picturedetail, callback){
 	console.log("getPersonFromDB");
 	
 	

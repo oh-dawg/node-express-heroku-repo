@@ -1,12 +1,12 @@
 // use this file only when neither the functions in postageCalcServer.js wont work, or the script in collageForm wont work.
 
-//const {Pool} = require("pg");
+ const {Pool} = require("pg");
 
 //connection string to connect to a database
 //const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:f04afeed7007ac3f3c39f7dd165c2ca20ec541b7942b032d92b7c2bd96eb1bc6@ec2-52-45-14-227.compute-1.amazonaws.com:5432/dfjeaerva4s9th?ssl=true";
 //const pool = new Pool ({connectionString: myConnectionString});
 
-/* function getCollage(req, res){
+function getCollage(req, res){
 	
 	console.log("i got into the collage project function");
 	
@@ -43,4 +43,4 @@ function getCollageFromDb(picturedetail, callback){
 		
 	});
 		
-}/*
+}
