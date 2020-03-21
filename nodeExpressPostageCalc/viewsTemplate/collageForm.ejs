@@ -3,7 +3,7 @@
    <head>
    
    <!--<script type="text/javascript" src="nodeExpresPostageCalc/public/collageFunctions.js"></script>-->
-   <script type="text/javascript" src="collageFunctions.js"></script>
+   <!--<script type="text/javascript" src="collageFunctions.js"></script>-->
    
    </head>
     <body>
@@ -14,21 +14,21 @@
 	
 	<script>
 	// use these scripts when neither the postageCalcServer.js functions or the functions in collageFunctions.js wont work.
-	/*const Pool = require("pg");
+	//const {Pool} = require("pg");
 
 //connection string to connect to a database
-	const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:f04afeed7007ac3f3c39f7dd165c2ca20ec541b7942b032d92b7c2bd96eb1bc6@ec2-52-45-14-227.compute-1.amazonaws.com:5432/dfjeaerva4s9th?ssl=true";
-	const pool = new Pool ({connectionString: myConnectionString});
+	//const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:f04afeed7007ac3f3c39f7dd165c2ca20ec541b7942b032d92b7c2bd96eb1bc6@ec2-52-45-14-227.compute-1.amazonaws.com:5432/dfjeaerva4s9th?ssl=true";
+	//const pool = new Pool ({connectionString: myConnectionString});
 
-	function getCollage(){
+	function getCollage(req, res){
 	
 	console.log("i got into the collage project function");
 	
-	//var result = {id: 123, picturedetail: "vacation", picturedetail2: "pet", picturedetail3: "nature"};
+	var result = {id: 123, picturedetail: "vacation", picturedetail2: "pet", picturedetail3: "nature"};
 	
 	document.getElementById("printArea").innerHTML = JSON.stringify(result);
 	
-	res.json(result);
+	res.JSON(result);
 	
 	var id = req.query.id;
 	// i think if i want to emulate the video i put getCollageFromDB in here?
