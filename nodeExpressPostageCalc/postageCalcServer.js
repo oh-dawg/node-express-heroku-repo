@@ -9,7 +9,8 @@ var app = express();
 	const {Pool} = require("pg");
 
 //connection string to connect to a database
-	const myConnectionString = process.env.DATABASE_URL || "postgres://kmkadjqhvmxugg:f04afeed7007ac3f3c39f7dd165c2ca20ec541b7942b032d92b7c2bd96eb1bc6@ec2-52-45-14-227.compute-1.amazonaws.com:5432/dfjeaerva4s9th?ssl=true";
+	//const myConnectionString = process.env.DATABASE_URL || "postgres://ifqhbkvidfemnj:b01af7ad1a34b0d69fdf4d6617ef71873dd02d0a5aad44c53e88f5416b59e225@ec2-34-193-232-231.compute-1.amazonaws.com:5432/dbbsvor9teh4sh&ssl=true";
+	const myConnectionString = "postgres://ifqhbkvidfemnj:b01af7ad1a34b0d69fdf4d6617ef71873dd02d0a5aad44c53e88f5416b59e225@ec2-34-193-232-231.compute-1.amazonaws.com:5432/dbbsvor9teh4sh";
 	const pool = new Pool ({connectionString: myConnectionString});
 
 app.use(express.static("public"));
@@ -29,7 +30,19 @@ app.get("/", function(req, res) {
 app.get("/collageproject", function(req, res) { 
 
 	console.log("started the collage page");
-	res.render("collageForm");
+	//res.render("collageForm");
+	
+	//console.log(res);
+	//console.log(req);
+	//console.log(pool);
+	//console.log(myConnectionString);
+	pool.query("SELECT * from collagetable", function(err, res) {
+		
+		console.log(err);
+		//console.log(res);
+		//pool.end();
+		
+	});
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! i need to call getCollage
 	
 });
