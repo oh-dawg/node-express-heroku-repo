@@ -12,7 +12,7 @@ var app = express();
 //connection string to connect to a database
 	//const myConnectionString = process.env.DATABASE_URL || "postgres://ifqhbkvidfemnj:b01af7ad1a34b0d69fdf4d6617ef71873dd02d0a5aad44c53e88f5416b59e225@ec2-34-193-232-231.compute-1.amazonaws.com:5432/dbbsvor9teh4sh&ssl=true";
 	const myConnecter = "postgres://ifqhbkvidfemnj:b01af7ad1a34b0d69fdf4d6617ef71873dd02d0a5aad44c53e88f5416b59e225@ec2-34-193-232-231.compute-1.amazonaws.com:5432/dbbsvor9teh4sh";
-	connectionString = { myConnecter, ssl: true};
+	connectionString = { connectionString: myConnecter, ssl: true};
 	
 	const pool = new poolPG.Pool(connectionString);
 	//const pool = new Pool ({connectionString: myConnectionString});
@@ -32,18 +32,37 @@ app.get("/", function(req, res) {
 	
 });
 
+app.get("/collageForm", function(req, res){
+	
+	res.render("collageForm");
+	
+});
+
 app.get("/collageproject", function(req, res) { 
 
+
 	console.log("started the collage page");
+	
+	var myRequest = "SELECT * FROM collagetable";
+	
 	//res.render("collageForm");
 	
 	//console.log(res);
 	//console.log(req);
 	//console.log(pool);
 	//console.log(myConnectionString);
-	pool.query("SELECT * from collagetable", function(err, res) {
+	pool.query(myRequest, function(err, result) {
 		
-		console.log(err);
+		if(err) {
+			
+			console.log(err.code);
+			console.log(err.message);
+			console.log(err.stack);
+			res.status(404).send('Not Finding table');
+		}
+		
+		console.log(res);
+		res.send(result.rows);
 		//console.log(res);
 		//pool.end();
 		
