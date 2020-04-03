@@ -65,14 +65,14 @@ app.get("/collageproject", function(req, res) {
 		myResult = result.rows;
 		//myResult = JSON.parse(this.responseText);
 		myText = "";
-		for(x in myResult)
+		for(i = 0; i < myResult.length; i++)
 		{
 			
-			myText += "<p> quote number:" + myResult[x].id + "</p>";
-			myText += "<p> first name:" + myResult[x].picturedetail1 + "</p>";
-			myText += "<p> last name:" + myResult[x].picturedetail2 + "</p>";
-			myText += "<p> subject:" + myResult[x].picturedetail3 + "</p>";
-			myText += "<p> quote:" + myResult[x].ppicturefilename + "</p>";
+			myText += "<p> quote number:" + myResult[i].id + "</p>";
+			myText += "<p> first name:" + myResult[i].firstname + "</p>";
+			myText += "<p> last name:" + myResult[i].lastname + "</p>";
+			myText += "<p> subject:" + myResult[i].arena + "</p>";
+			myText += "<p> quote:" + myResult[i].quote + "</p>";
 			
 		}
 		
