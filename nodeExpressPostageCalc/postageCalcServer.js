@@ -61,7 +61,9 @@ app.get("/collageproject", function(req, res) {
 			res.status(404).send('Not Finding table');
 		}
 		
-		/*myResult = JSON.parse(this.responseText);
+		
+		myResult = result.rows;
+		//myResult = JSON.parse(this.responseText);
 		myText = "";
 		for(x in myResult)
 		{
@@ -72,11 +74,11 @@ app.get("/collageproject", function(req, res) {
 			myText += "<p> subject:" + myResult[x].picturedetail3 + "</p>";
 			myText += "<p> quote:" + myResult[x].ppicturefilename + "</p>";
 			
-		}*/
-		
+		}
 		
 		console.log(res);
-		res.send(result.rows);
+		res.send(myText);
+		//res.send(result.rows);
 		//console.log(res);
 		//pool.end();
 		
