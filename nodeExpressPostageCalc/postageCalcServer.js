@@ -43,7 +43,7 @@ app.get("/collageproject", function(req, res) {
 
 	console.log("started the collage page");
 	
-	var myRequest = "SELECT * FROM collagetable";
+	var myRequest = "SELECT * FROM quotetable";
 	
 	//res.render("collageForm");
 	
